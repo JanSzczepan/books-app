@@ -1,9 +1,20 @@
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-function App() {
+import Home from './pages/Home';
+import Form from './pages/Form';
+import './App.scss';
+import './custom.scss';
+
+const App = () => {
   return (
     <div className="App">
-      
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/add-book' element={<Form />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
