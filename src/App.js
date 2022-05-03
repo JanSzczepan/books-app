@@ -8,14 +8,14 @@ import './custom.scss';
 
 const App = () => {
   return (
-    <div className="App">
+    <main className="App">
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/add-book' element={<Form />} />
         </Routes>
       </BrowserRouter>
-    </div>
+    </main>
   );
 }
 

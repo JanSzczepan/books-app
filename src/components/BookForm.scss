@@ -1,0 +1,51 @@
+@import '../variables.scss';
+
+.bookForm {
+   min-height: 100vh;
+   background-color: map-get($colors, "nice");
+   color: map-get($colors, "dark");
+
+   .bookForm-wrapper {
+      max-width: 600px;
+   }
+
+   .bookForm__header {
+      position: relative;
+   }
+
+   .bookForm__arrow-btn {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background-color: transparent;
+      border: none;
+   }
+
+   .bookForm__arrow-icon {
+      font-size: 2rem;
+      color: map-get($colors, "dark");
+   }
+
+   .bookForm__title {
+      color: map-get($colors, "light");
+   }
+
+   .bookForm__icon-book-wrapper {
+      position: relative;
+      height: 100px;
+      width: 100px;
+      margin-top: 50px;
+      margin-bottom: 60px;
+      border: 3px solid map-get($colors, "dark");
+      border-radius: 50%;
+   }
+
+   .bookForm__book-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3rem;
+   }
+}

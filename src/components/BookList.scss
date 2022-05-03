@@ -1,0 +1,37 @@
+@import '../variables.scss';
+
+.bookList {
+   color: map-get($colors, "dark");
+
+   .bookList-wrapper {
+      max-width: 1000px;
+      padding: 30px;
+   }
+
+   .bookList__title {
+      color: map-get($colors, "gray");
+   }
+
+   .bookList__icon-book {
+      font-size: 2.5rem;
+   }
+
+   .bookList__book-title {
+      font-size: 1.8rem;
+   }
+
+   .bookList__author {
+      font-size: 1.4rem;
+      color: map-get($colors, "gray");
+   }
+
+   .bookList__btn-read, .bookList__btn-x {
+      background-color: transparent;
+      border: none;
+   }
+
+   .bookList__icon-read, .bookList__icon-x {
+      font-size: 1.4rem;
+      color: map-get($colors, "gray");
+   }
+}
