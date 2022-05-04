@@ -45,7 +45,7 @@ const Header = () => {
          <div className='header__info-box col-12 col-sm-5 justify-content-start'>
             <div className="header__info-shadow"></div>
             <div className="header__info-wrapper d-flex flex-wrap h-100">
-               <div className="header-info col-12 align-self-end d-flex justify-content-center gap-5">
+               <div className="header-info col-12 align-self-end d-flex justify-content-center gap-5 mb-4 mb-sm-0">
                   <h4 className='header__info-books '>
                      <strong className='header__info-books-strong'>
                         {books.length}

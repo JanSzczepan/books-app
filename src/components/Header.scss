@@ -31,8 +31,12 @@
    }
 
    .header__title {
-      font-size: 4rem;
+      font-size: 3.6rem;
       color: map-get($colors, "light");
+
+      @media(min-width: map-get($bp, "small")) {
+         font-size: 4rem;
+      }
    }
 
    .header__date {
@@ -54,8 +58,12 @@
    }
    
    .header__info-books {
-      text-align: right;
+      text-align: center;
       color: map-get($colors, "gray");
+
+      @media(min-width: map-get($bp, "small")) {
+         text-align: right;
+      }
    }
 
    .header__info-books-strong {

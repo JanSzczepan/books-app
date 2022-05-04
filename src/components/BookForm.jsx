@@ -11,13 +11,13 @@ const BookForm = () => {
    const navigate = useNavigate();
 
    return ( 
-      <section className='bookForm p-5'>
+      <section className='bookForm py-5 px-4 px-sm-5'>
          <div className='bookForm-wrapper mx-auto'>
             <div className='bookForm__header d-flex justify-content-center align-items-center'>
-               <button className='bookForm__arrow-btn p-3' onClick={() => navigate('/')}>
+               <button className='bookForm__arrow-btn py-3 px-sm-3' onClick={() => navigate('/')}>
                   <FontAwesomeIcon className='bookForm__arrow-icon' icon={faArrowLeft} />
                </button>
-               <h3 className='bookForm__title m-0'>Add new book</h3>
+               <h3 className='bookForm__title m-0 text-center'>Add new book</h3>
             </div>
             <div className='bookForm__icon-book-wrapper mx-auto'>
                <FontAwesomeIcon className='bookForm__book-icon' icon={faBook} />

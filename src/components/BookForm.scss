@@ -6,7 +6,7 @@
    color: map-get($colors, "dark");
 
    .bookForm-wrapper {
-      max-width: 500px;
+      max-width: 350px;
    }
 
    .bookForm__header {
@@ -23,8 +23,12 @@
    }
 
    .bookForm__arrow-icon {
-      font-size: 2rem;
+      font-size: 1.8rem;
       color: map-get($colors, "dark");
+
+      @media(min-width: map-get($bp, "small")) {
+         font-size: 2rem;
+      }
    }
 
    .bookForm__title {

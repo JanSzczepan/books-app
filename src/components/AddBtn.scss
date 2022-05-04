@@ -9,11 +9,16 @@
 
 .addBtn__btn {
    position: relative;
-   width: 70px;
-   height: 70px;
+   width: 50px;
+   height: 50px;
    background-color: map-get($colors, "nice");
    border: none;
    border-radius: 50%;
+
+   @media(min-width: map-get($bp, "small")) {
+      width: 70px;
+      height: 70px;
+   }
 
    .addBtn__icon {
       position: absolute;
@@ -21,6 +26,10 @@
       left: 50%;
       transform: translate(-50%, -50%);
       color: map-get($colors, "light");
-      font-size: 2.5rem;
+      font-size: 2rem;
+
+      @media(min-width: map-get($bp, "small")) {
+         font-size: 2.5rem;
+      }
    }
 }

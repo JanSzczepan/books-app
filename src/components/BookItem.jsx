@@ -17,7 +17,7 @@ const BookItem = ({title, author, id}) => {
    }, [books, readBooks]);
 
    return ( 
-      <li className='bookList__list-item d-flex align-items-center px-4 py-3'>
+      <li className='bookList__list-item d-flex align-items-center px-3 px-sm-4 py-3'>
          <FontAwesomeIcon 
             className={`bookList__icon-book ${read ? 'bookList__icon-book--read' : ''} me-4`}
             icon={faBook}
@@ -32,7 +32,7 @@ const BookItem = ({title, author, id}) => {
          </div>
          <div className='bookList__icons ms-auto'>
             <button 
-               className='bookList__btn-read p-3'
+               className='bookList__btn-read px-3 py-1 py-sm-3'
                type='button'
                onClick={() => {
                   setRead(!read);
@@ -42,7 +42,7 @@ const BookItem = ({title, author, id}) => {
                <FontAwesomeIcon className='bookList__icon-read' icon={faMarker} />
             </button>
             <button 
-               className='bookList__btn-x p-3' 
+               className='bookList__btn-x px-3 py-1 py-sm-3' 
                type='button'
                onClick={() => {
                   removeBook(id);
