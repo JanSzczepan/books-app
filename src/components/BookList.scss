@@ -8,12 +8,19 @@
       padding: 30px;
    }
 
+   .bookList__list {
+      margin-bottom: 60px;
+   }
+
    .bookList__title {
       color: map-get($colors, "gray");
    }
 
    .bookList__icon-book {
       font-size: 2.5rem;
+   }
+   .bookList__icon-book--read {
+      color: map-get($colors, "nice");
    }
 
    .bookList__book-title {
@@ -25,6 +32,10 @@
       color: map-get($colors, "gray");
    }
 
+   .bookList__book-title--read, .bookList__author--read {
+      text-decoration: line-through;
+   }
+
    .bookList__btn-read, .bookList__btn-x {
       background-color: transparent;
       border: none;
@@ -33,5 +44,14 @@
    .bookList__icon-read, .bookList__icon-x {
       font-size: 1.4rem;
       color: map-get($colors, "gray");
+   }
+   .bookList__icon-x:hover {
+      color: map-get($colors, "red");
+   }
+
+   .bookList__nobooks-text {
+      margin-bottom: 80px;
+      text-align: center;
+      font-size: 1.8rem;
    }
 }
