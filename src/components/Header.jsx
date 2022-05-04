@@ -4,15 +4,15 @@ import './Header.scss';
 
 const Header = () => {
    return ( 
-      <header className='header d-flex'>
+      <header className='header d-flex flex-column flex-sm-row'>
          <div className='header__shadow'></div>
-         <div className='header__title-box col-7 d-flex justify-content-end'>
+         <div className='header__title-box col-12 col-sm-7 d-flex justify-content-end'>
             <div className="header__title-wrapper d-flex flex-wrap h-100">
                <h1 className='header__title col-12 align-self-end'>Your Books</h1>
                <h5 className='header__date col-12 align-self-end'>Sep 5, 2022</h5>
             </div>
          </div>
-         <div className='header__info-box col-5 justify-content-start'>
+         <div className='header__info-box col-12 col-sm-5 justify-content-start'>
             <div className="header__info-shadow"></div>
             <div className="header__info-wrapper d-flex flex-wrap h-100">
                <div className="header-info col-12 align-self-end d-flex justify-content-center gap-5">
