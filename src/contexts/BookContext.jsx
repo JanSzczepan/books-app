@@ -22,24 +22,6 @@ const BookContextProvider = (props) => {
       localStorage.setItem('readBooks', JSON.stringify(readBooks))  
    }, [readBooks]);
 
-   // const addBook = (title, author, id) => {
-   //    setBooks([...books, {title, author, id}])
-   // }
-
-   // const removeBook = (id) => {
-   //    const booksFiltered = books.filter(book => book.id !== id)
-   //    setBooks(booksFiltered)
-   // }
-
-   // const readBook = (book) => {
-   //    setReadBooks([...readBooks, book])
-   // }
-
-   // const removeReadBook = (id) => {
-   //    const booksFiltered = readBooks.filter(book => book.id !== id)
-   //    setReadBooks(booksFiltered)
-   // }
-
    return ( 
       <BookContext.Provider value={{books, readBooks, dispatchBooks, dispatchReadBooks}}>
          {props.children}
