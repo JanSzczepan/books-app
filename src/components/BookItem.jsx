@@ -8,7 +8,7 @@ import './BookList.scss';
 
 const BookItem = ({title, author, id}) => {
 
-   const { books, readBooks, removeBook, readBook, removeReadBook } = useContext(BookContext);
+   const { books, readBooks, dispatchBooks, dispatchReadBooks } = useContext(BookContext);
    const [ read, setRead ] = useState(false);
 
    useEffect(() => {
@@ -36,7 +36,7 @@ const BookItem = ({title, author, id}) => {
                type='button'
                onClick={() => {
                   setRead(!read);
-                  read ? removeReadBook(id) : readBook({title, author, id});
+                  read ? dispatchReadBooks({type: 'REMOVE_READ_BOOK', id}) : dispatchReadBooks({type: 'ADD_READ_BOOK', book: {title, author, id}});
                }}
             >
                <FontAwesomeIcon className='bookList__icon-read' icon={faMarker} />
@@ -45,8 +45,8 @@ const BookItem = ({title, author, id}) => {
                className='bookList__btn-x px-3 py-1 py-sm-3' 
                type='button'
                onClick={() => {
-                  removeBook(id);
-                  if(read) removeReadBook(id);
+                  dispatchBooks({type: 'REMOVE_BOOK', id});
+                  if(read) dispatchReadBooks({type: 'REMOVE_READ_BOOK', id});
                }}   
             >
                <FontAwesomeIcon className='bookList__icon-x' icon={faXmark} />

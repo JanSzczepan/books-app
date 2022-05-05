@@ -8,14 +8,14 @@ import './FormComp.scss';
 const FormComp = () => {
 
    const navigate = useNavigate();
-   const { addBook } = useContext(BookContext);
+   const { dispatchBooks } = useContext(BookContext);
    const [ title, setTitle ] = useState('') ;
    const [ author, setAuthor ] = useState('') ;
 
    const submitForm = (e) => {
       e.preventDefault();
 
-      addBook(title, author, uuid())
+      dispatchBooks({type: 'ADD_BOOK', book: {title, author, id: uuid()}})
 
       navigate('/');
    }
